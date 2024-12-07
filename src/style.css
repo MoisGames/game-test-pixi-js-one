@@ -38,7 +38,12 @@ button {
   height: 90vh;
 }
 
-.friends-slider {
+.navigation__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.friends-slider, .other-buttons__wrapper {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -120,4 +125,38 @@ button {
   background-image: url(../public/map/block_friend/emptyIcon.png);
   width: 50px;
   height: 51px;
+}
+
+.other-buttons__wrapper {
+  margin-left: 3px;
+  gap: 6px;
+  align-items: end;
+}
+
+#chatButton {
+  background-image: url(../public/map/buttons/chatStandart.png);
+  width: 66px;
+  height: 60px;
+}
+
+#chatButton:hover {
+  background-image: url(../public/map/buttons/ChatLight.png);
+}
+
+#toUniversityButton {
+  background-image: url(../public/map/buttons/uгniversityButton.png);
+  width: 204px;
+  height: 63px;
+}
+
+#mailButton {
+  background-image: url(../public/map/buttons/messageButton.png);
+  width: 66px;
+  height: 60px;
+}
+
+#ratingButton {
+  background-image: url(../public/map/buttons/ratingButton.png);
+  width: 67px;
+  height: 61px;
 }

@@ -18,8 +18,6 @@
   padding: 0;
   --background-game: rgb(2,109,97);
 
-  overflow: hidden;
-
 }
 
 button {
@@ -49,7 +47,6 @@ button {
   flex-direction: row;
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
   top: 610px;
   background-size: cover;
   background-position: center;

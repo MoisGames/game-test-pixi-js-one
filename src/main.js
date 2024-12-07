@@ -1,5 +1,6 @@
 import { Application, Assets, Sprite } from 'pixi.js';
 import { Friends } from './friend.js';
+import { Player } from './rating.js';
 
 class Game {
     constructor() {
@@ -91,6 +92,8 @@ class Game {
         this.girl.x = 434;
         this.girl.y = 508;
         this.app.stage.addChild(this.girl);
+
+
     }
 
     setupButtons() {
@@ -116,6 +119,45 @@ class Game {
         buttonToUniversity.addEventListener('pointerup', () => {
             buttonToUniversity.style.transform = 'scale(1.1)'
             this.moveToNextPoint();
+        });
+
+        const ratingClass = new Player()
+        const buttonOpenRating = document.getElementById('ratingButton');
+
+        buttonOpenRating.addEventListener('pointerover', () => {
+            buttonOpenRating.style.transform = 'scale(1.03)';
+        });
+
+        buttonOpenRating.addEventListener('pointerout', () => {
+            buttonOpenRating.style.transform = 'scale(1)';
+        });
+
+        buttonOpenRating.addEventListener('pointerdown', () => {
+            buttonOpenRating.style.transform = 'scale(0.9)';
+        });
+
+        buttonOpenRating.addEventListener('pointerup', () => {
+            buttonOpenRating.style.transform = 'scale(1.1)'
+            ratingClass.showRatingWindow()
+        });
+
+        const buttonCloseRating = document.getElementById('closeWindowRating');
+
+        buttonCloseRating.addEventListener('pointerover', () => {
+            buttonCloseRating.style.transform = 'scale(1.03)';
+        });
+
+        buttonCloseRating.addEventListener('pointerout', () => {
+            buttonCloseRating.style.transform = 'scale(1)';
+        });
+
+        buttonCloseRating.addEventListener('pointerdown', () => {
+            buttonCloseRating.style.transform = 'scale(0.9)';
+        });
+
+        buttonCloseRating.addEventListener('pointerup', () => {
+            buttonCloseRating.style.transform = 'scale(1.1)'
+            ratingClass.hideRatingWindow()
         });
     }
 

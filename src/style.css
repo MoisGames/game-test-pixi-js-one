@@ -33,7 +33,7 @@ button {
   align-items: center;
 
   width: 100%;
-  height: 90vh;
+  height: 90%;
 }
 
 .navigation__wrapper {
@@ -65,20 +65,20 @@ button {
 .friends-slider__content {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Центрируем элементы по вертикали */
+  align-items: center; 
   margin-left: 10px;
 }
 
 .friends-slider__block_friends {
   display: flex;
-  margin: 0; /* Убираем внешние отступы */
-  padding: 0; /* Убираем внутренние отступы */
-  border: none; /* Убедимся, что границ нет */
+  margin: 0; 
+  padding: 0; 
+  border: none; 
 }
 
 .friend-icon__standart,
 .friend-icon__empty {
-  margin: 2px 5px 0px 5px; /* Отступы между элементами - 6px */
+  margin: 2px 5px 0px 5px; 
 }
 
 
@@ -94,15 +94,15 @@ button {
   background-image: url(../public/map/block_friend/leftArrow.png);
   width: 16px;
   height: 28px;
-  margin-left: 5px; /* Расстояние 4px до первого элемента */
-  /* Если нужно для центрирования по вертикали */
+  margin-left: 5px; 
+  
 }
 
 #rightArrow {
   background-image: url(../public/map/block_friend/rightArrow.png);
   width: 16px;
   height: 28px;
-  margin-right: 5px; /* Расстояние 4px до последнего элемента */
+  margin-right: 5px; 
 }
 
 .friend-icon__first {
@@ -156,4 +156,109 @@ button {
   background-image: url(../public/map/buttons/ratingButton.png);
   width: 67px;
   height: 61px;
+}
+
+.rating-window__wrapper.visible {
+  opacity: 1; 
+  visibility: visible; 
+}
+
+.rating-window__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.rating-window__content {
+  position: absolute; 
+  top: -100%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  transition: top 0.5s ease; 
+  background-image: url(../public/map/rating/windowRating.png);
+  width: 523px;
+  height: 466px;
+}
+
+.rating-window__wrapper.visible .rating-window__content {
+  top: 10%; 
+}
+
+.list-players {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  max-width: 466px; 
+  max-height: 230px; 
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  margin: 175px 0px 0px 60px;
+  padding: 0; 
+}
+
+.element-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px; 
+  height: 27px; 
+  background-image: url(../public/map/rating/backgroundElementRating.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 12px;
+}
+
+.element-rating__text {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  font: 900 16px Tahoma, sans-serif; 
+  font-weight: 900; 
+}
+
+#textIdSpan {
+
+  flex: 0 0 66px; 
+  height: 27px;
+}
+
+#imgButtonRating {
+  flex: 0 0 28px; 
+  height: 27px;
+}
+
+#nameFriendSpan {
+  display: flex; 
+  align-items: center;
+  justify-content: start;
+  flex: 0 0 187px; 
+  margin-left: 5px;
+  height: 27px;
+  
+}
+
+#qtExpSpan {
+  flex: 0 0 116px; 
+  height: 27px;
+}
+
+.friend-light {
+  background-image: url(../public/map/rating/backgroundElementRatingLight.png);
+}
+
+#closeWindowRating {
+  position: relative;
+  left: 480px;
+  bottom: 380px;
+  background-image: url(../public/map/rating/buttonClose.png);
+  width: 26px;
+  height: 26px;
 }

@@ -1,6 +1,5 @@
 import { Application, Assets, Sprite } from 'pixi.js';
-
-
+import { Friends } from './friend.js';
 
 async function gameFunction() {
     
@@ -165,4 +164,12 @@ async function gameFunction() {
     }
 };
 
+// Создайте экземпляр класса
+
 gameFunction()
+
+const friendsList = new Friends();
+
+// Назначьте обработчики событий
+document.getElementById('leftArrow').addEventListener('click', () => friendsList.changingQtFriendDecrement());
+document.getElementById('rightArrow').addEventListener('click', () => friendsList.changingQtFriendIncrement());

@@ -1,4 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  padding-inline: 0px;
 
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,6 +18,14 @@
   padding: 0;
   --background-game: rgb(2,109,97);
 
+  overflow: hidden;
+
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  background: none;
 }
 
 .game__wrapper {
@@ -23,4 +36,88 @@
 
   width: 100%;
   height: 90vh;
+}
+
+.friends-slider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  top: 610px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#friendsSlider {
+  background-image: url(../public/map/block_friend/blockFriendBackground.png);
+  width: 540px;
+  height: 63px;
+}
+.friend {
+  margin: 5px 0;
+}
+
+.friends-slider__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Центрируем элементы по вертикали */
+  margin-left: 10px;
+}
+
+.friends-slider__block_friends {
+  display: flex;
+  margin: 0; /* Убираем внешние отступы */
+  padding: 0; /* Убираем внутренние отступы */
+  border: none; /* Убедимся, что границ нет */
+}
+
+.friend-icon__standart,
+.friend-icon__empty {
+  margin: 2px 5px 0px 5px; /* Отступы между элементами - 6px */
+}
+
+
+.button-style {
+  background: none;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#leftArrow {
+  background-image: url(../public/map/block_friend/leftArrow.png);
+  width: 16px;
+  height: 28px;
+  margin-left: 5px; /* Расстояние 4px до первого элемента */
+  /* Если нужно для центрирования по вертикали */
+}
+
+#rightArrow {
+  background-image: url(../public/map/block_friend/rightArrow.png);
+  width: 16px;
+  height: 28px;
+  margin-right: 5px; /* Расстояние 4px до последнего элемента */
+}
+
+.friend-icon__first {
+  background: url(../public/map/block_friend/firstIcon.png);
+  width: 56px;
+  height: 51px;
+  margin: 0px -1px 0px 5px;
+}
+
+.friend-icon__standart {
+  background-image: url(../public/map/block_friend/standartIcon.png);
+  width: 50px;
+  height: 51px;
+}
+
+.friend-icon__empty {
+  background-image: url(../public/map/block_friend/emptyIcon.png);
+  width: 50px;
+  height: 51px;
 }
